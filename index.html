@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Escolas Literárias | Literatura em Língua Portuguesa</title>
+
+    <meta name="description"
+        content="Uma viagem pela literatura em língua portuguesa através do tempo, relacionando literatura, história e sociedade.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho e navegação principal -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-mark">E</span>
+                <span>Escolas Literárias</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="#inicio">Início</a>
+                <a href="#linha-do-tempo">Linha do tempo</a>
+                <a href="#escolas">Escolas Literárias</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             PÁGINA INICIAL
+        ========================== -->
+        <section id="inicio" class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-label">
+                    LITERATURA + HISTÓRIA + SOCIEDADE
+                </div>
+
+                <h1>
+                    Escolas<br>
+                    <span>Literárias</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Uma viagem pela literatura em língua portuguesa através do tempo.
+                </p>
+
+                <p class="hero-description">
+                    Entenda como os acontecimentos históricos, as transformações
+                    sociais e as ideias de cada época ajudaram a formar diferentes
+                    maneiras de escrever, pensar e representar o mundo.
+                </p>
+
+                <a href="#linha-do-tempo" class="primary-button">
+                    Explorar a linha do tempo
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LINHA DO TEMPO
+        ========================== -->
+        <section id="linha-do-tempo" class="timeline-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-number">01</span>
+
+                    <div>
+                        <p class="eyebrow">CRONOLOGIA</p>
+
+                        <h2>
+                            Uma história contada<br>
+                            através da literatura.
+                        </h2>
+
+                        <p>
+                            Clique em uma escola literária para conhecer seu período,
+                            contexto histórico, autores, obras e características.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div id="timeline" class="timeline" aria-label="Linha do tempo das escolas literárias">
+                    <!-- Os itens são criados pelo JavaScript -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETALHES DA ESCOLA
+        ========================== -->
+        <section id="escolas" class="school-section">
+
+            <div class="container">
+
+                <!-- Estado inicial -->
+                <div id="school-placeholder" class="school-placeholder">
+
+                    <div class="placeholder-symbol">✦</div>
+
+                    <h2>
+                        Escolha uma escola literária
+                    </h2>
+
+                    <p>
+                        Selecione um período na linha do tempo para começar
+                        a explorar a história da literatura em língua portuguesa.
+                    </p>
+
+                </div>
+
+
+                <!-- Conteúdo da escola -->
+                <article id="school-detail" class="school-detail hidden" aria-live="polite">
+
+                    <button id="back-button" class="back-button" type="button">
+                        ← Voltar para a linha do tempo
+                    </button>
+
+
+                    <div class="school-header">
+
+                        <div>
+                            <p id="school-category" class="school-category"></p>
+
+                            <h2 id="school-name"></h2>
+
+                            <p id="school-period" class="school-period"></p>
+                        </div>
+
+                        <div id="school-index" class="school-index"></div>
+
+                    </div>
+
+
+                    <!-- Informações principais -->
+                    <div class="info-grid">
+
+                        <div class="info-card">
+                            <span>Onde se desenvolveu</span>
+                            <p id="school-place"></p>
+                        </div>
+
+                        <div class="info-card">
+                            <span>Gêneros mais importantes</span>
+                            <p id="school-genres"></p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contexto histórico -->
+                    <section class="content-section historical-section">
+
+                        <div class="content-section-title">
+                            <span>01</span>
+                            <h3>Contexto histórico</h3>
+                        </div>
+
+                        <div id="school-history" class="content-text"></div>
+
+                    </section>
+
+
+                    <!-- Portugal -->
+                    <section id="portugal-section" class="country-section">
+
+                        <div class="country-heading">
+                            <span class="country-tag">PT</span>
+
+                            <div>
+                                <p>PORTUGAL</p>
+                                <h3>O contexto português</h3>
+                            </div>
+                        </div>
+
+                        <div class="country-grid">
+
+                            <div>
+                                <span>Período</span>
+                                <p id="portugal-period"></p>
+                            </div>
+
+                            <div>
+                                <span>Contexto</span>
+                                <p id="portugal-context"></p>
+                            </div>
+
+                            <div>
+                                <span>Autores</span>
+                                <p id="portugal-authors"></p>
+                            </div>
+
+                            <div>
+                                <span>Obras</span>
+                                <p id="portugal-works"></p>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Brasil -->
+                    <section id="brazil-section" class="country-section">
+
+                        <div class="country-heading">
+                            <span class="country-tag brazil-tag">BR</span>
+
+                            <div>
+                                <p>BRASIL</p>
+                                <h3>O contexto brasileiro</h3>
+                            </div>
+                        </div>
+
+                        <div class="country-grid">
+
+                            <div>
+                                <span>Período</span>
+                                <p id="brazil-period"></p>
+                            </div>
+
+                            <div>
+                                <span>Contexto</span>
+                                <p id="brazil-context"></p>
+                            </div>
+
+                            <div>
+                                <span>Autores</span>
+                                <p id="brazil-authors"></p>
+                            </div>
+
+                            <div>
+                                <span>Obras</span>
+                                <p id="brazil-works"></p>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Características -->
+                    <section class="content-section">
+
+                        <div class="content-section-title">
+                            <span>02</span>
+                            <h3>Características literárias</h3>
+                        </div>
+
+                        <div id="school-characteristics" class="characteristics-grid"></div>
+
+                    </section>
+
+
+                    <!-- Autores e obras -->
+                    <section class="content-section">
+
+                        <div class="content-section-title">
+                            <span>03</span>
+                            <h3>Autores e obras fundamentais</h3>
+                        </div>
+
+                        <div id="authors-works" class="authors-works-grid"></div>
+
+                    </section>
+
+
+                    <!-- Contexto social -->
+                    <section class="content-section social-section">
+
+                        <div class="content-section-title">
+                            <span>04</span>
+                            <h3>Sociedade e cultura</h3>
+                        </div>
+
+                        <div id="school-social" class="content-text"></div>
+
+                    </section>
+
+
+                    <!-- Curiosidade -->
+                    <aside class="curiosity-card">
+
+                        <div class="curiosity-icon">✦</div>
+
+                        <div>
+                            <p>CURIOSIDADE</p>
+                            <h3 id="school-curiosity-title"></h3>
+                            <p id="school-curiosity"></p>
+                        </div>
+
+                    </aside>
+
+
+                    <!-- Navegação -->
+                    <div class="school-navigation">
+
+                        <button id="previous-button" class="secondary-button" type="button">
+                            ← Anterior
+                        </button>
+
+                        <button id="next-button" class="secondary-button" type="button">
+                            Próxima →
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+        <section id="sobre" class="about-section">
+
+            <div class="container about-grid">
+
+                <div>
+                    <p class="eyebrow">SOBRE O PROJETO</p>
+
+                    <h2>
+                        Literatura não acontece<br>
+                        fora da história.
+                    </h2>
+                </div>
+
+                <div class="about-text">
+
+                    <p>
+                        As escolas literárias são formas de organizar a história
+                        da literatura a partir de tendências estéticas e culturais
+                        compartilhadas em determinados períodos.
+                    </p>
+
+                    <p>
+                        Essa organização é útil para estudar literatura, mas não
+                        significa que uma escola comece ou termine exatamente em
+                        uma determinada data. Autores podem apresentar características
+                        de diferentes movimentos, e os períodos de Portugal e Brasil
+                        nem sempre coincidem.
+                    </p>
+
+                    <p>
+                        Por isso, este projeto privilegia a relação entre
+                        <strong>literatura, história e sociedade</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="container sources">
+
+                <h3>Fontes de referência</h3>
+
+                <p>
+                    A estrutura histórica foi conferida com materiais de referência
+                    literária e educacional, incluindo conteúdos da Biblioteca
+                    Nacional Digital, Academia Brasileira de Letras, Câmara dos
+                    Deputados e materiais didáticos de literatura.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <p>
+                Escolas Literárias
+            </p>
+
+            <p>
+                Literatura em língua portuguesa através do tempo.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
